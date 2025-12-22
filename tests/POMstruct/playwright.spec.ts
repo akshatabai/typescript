@@ -1,7 +1,9 @@
 import { test } from '@playwright/test';
 import { PlaywrightDevPage } from './playwright-dev';
 
+
 test('show pom module', async ({ page, browser }) => {
+  
   const playwrightDev = new PlaywrightDevPage(page, browser);
 
   await playwrightDev.openUrl();
@@ -10,8 +12,10 @@ test('show pom module', async ({ page, browser }) => {
   await playwrightDev.enterEmailId();
   await playwrightDev.enterPassword();
   await playwrightDev.reEnterPassword();
-
-  // Optional: usually handled by Playwright automatically
+  await playwrightDev.clickdateofbirth('07','MAR','2000');
+  await playwrightDev.genderspecify();
+  await playwrightDev.country();
+  await playwrightDev.city();
   await playwrightDev.closeBrowser();
 });
 
