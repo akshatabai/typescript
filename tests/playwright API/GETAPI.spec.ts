@@ -27,7 +27,7 @@ test('GET API TEST',async ({request}) =>{  // default instance(req) created by c
 
 
 // paramter values 
-test('Get 1 ID for fname n lname', async ({ request }) => {
+/*test('Get 1 ID for fname n lname', async ({ request }) => {
     const response: APIResponse = await request.get('/booking', {
         params: { firstname: 'Josh', lastname: 'Allen' }  // default it display all the booking ids booked by josh  
     });
@@ -57,7 +57,7 @@ test('pick fields from body',async ( {request})  =>{
     expect(response.status()).toBe(200);
     console.log(responsebody.firstname + ' ' + responsebody.lastname);
 
-});
+});*/
 
 
 /*

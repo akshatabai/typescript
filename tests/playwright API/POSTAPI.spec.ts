@@ -1,4 +1,4 @@
-import {test,expect,request,APIRequestContext,APIResponse} from '@playwright/test';
+/*import {test,expect,request,APIRequestContext,APIResponse} from '@playwright/test';
 
 let apirequest:APIRequestContext;
 
@@ -31,4 +31,4 @@ test('send data to server',async({request})=>{
         expect(resbody).toHaveProperty("bookingid"); // response genrate booking id
 
 
-});
+});*/

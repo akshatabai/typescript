@@ -23,13 +23,12 @@ test('API endpoint',async({request,page})=>{
        // login ceredtials
        await page.goto("https://www.demoblaze.com");
        await page.getByRole('link',{name:"Log in"}).click();
-       await page.locator("#loginusername").fill("bhuvan");
-       await page.locator("#loginpassword").fill("bhuv@123");
-       //await page.locator("//button[@onclick='logIn()']").click();
-        await page.getByRole('button',{name:'Log in'}).click();
+       await page.locator("#loginusername").fill("trainingsel");
+       await page.locator("#loginpassword").fill("4567890");
+       await page.getByRole('button',{name:'Log in'}).click();
        await page.getByRole('link',{name:'Cart'}).click();
-       await page.locator("//[@class='table-responsive']").isVisible();
-      const text=  await page.locator("//[@class='success']/td[2]").textContent();
+       await page.locator("//div[@class='table-responsive']").isVisible();
+      const text=  await page.locator("//*[@class='success']/td[2]").textContent();
       console.log(text);
       expect(text).toBe("Samsung galaxy s6");
 
